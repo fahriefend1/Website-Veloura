@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk | VELOURA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="produk.html" class="active">Produk</a>
+      </div>
+      <div class="logo">VELOURA</div>
+      <div class="nav-right">
+        <a href="tentang_kami.html">Tentang Kami</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="product">
+    <div class="product-image">
+      <span class="arrow left" onclick="prevVariant()">‹</span>
+      <img id="productImg" src="img/Produk 3.jpg" alt="Veloura Hair Mist">
+      <span class="arrow right" onclick="nextVariant()">›</span>
+    </div>
+
+    <div class="product-info">
+      <h1 id="variantName">Chamomile Dreams</h1>
+      <div class="rating">★★★★☆ 4.5 (35 Ulasan)</div>
+      <div class="price">
+        <span id="price">Rp 20.000</span>
+        <small>/ 60ml (HPP: Rp 13.500, Margin: 48,15%)</small>
+      </div>
+      <p id="variantDesc">Hair mist dengan aroma chamomile yang lembut dan menenangkan. Formulasi alami dengan air suling dan aloe vera membantu menjaga kesegaran rambut sekaligus memberikan sensasi relaksasi sepanjang hari. Cocok untuk mahasiswa dan pekerja muda usia 15-40 tahun.</p>
+
+      <div class="variant">
+        <button class="active" onclick="setVariant(0)">Chamomile Dreams</button>
+        <button onclick="setVariant(1)">Rosemary Garden</button>
+      </div>
+
+      <div class="qty">
+        <strong>Jumlah</strong>
+        <button onclick="qty-- && updateQty()">-</button>
+        <span id="qty">1</span>
+        <button onclick="qty++ && updateQty()">+</button>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-outline" onclick="toggleExtra('komposisi')">Lihat Komposisi</button>
+        <button class="btn btn-outline" onclick="toggleExtra('manfaat')">Manfaat</button>
+        <button class="btn btn-outline" onclick="toggleExtra('penggunaan')">Cara Penggunaan</button>
+        <a href="https://wa.me/6281234567890?text=Halo%20Veloura,%20saya%20ingin%20memesan%20Hair%20Mist" class="btn btn-wa">Pesan via WhatsApp</a>
+      </div>
+
+      <div id="komposisi" class="extra">
+        <h4>Komposisi Alami:</h4>
+        <ul>
+          <li>Air Suling (MX Filter)</li>
+          <li>Aloe Vera Extract (Kimia Jaya Abadi)</li>
+          <li>Essential Oil Chamomile/Rosemary (Mix Max Store)</li>
+          <li>Alkohol Food Grade (Parfumktai)</li>
+        </ul>
+        <p><small>*Tidak mengandung alkohol tinggi, paraben, atau sulfat</small></p>
+      </div>
+      
+      <div id="manfaat" class="extra">
+        <h4>Manfaat Veloura Hair Mist:</h4>
+        <ul>
+          <li>Menghilangkan bau apek pada rambut (71,4% responden menginginkan)</li>
+          <li>Memberikan aroma segar & lembut tahan lama (88,6% preferensi responden)</li>
+          <li>Melembutkan rambut (77,1% responden menginginkan)</li>
+          <li>Melindungi dari polusi & sinar matahari</li>
+          <li>Meningkatkan kepercayaan diri untuk aktivitas sehari-hari</li>
+        </ul>
+      </div>
+      
+      <div id="penggunaan" class="extra">
+        <h4>Cara Penggunaan:</h4>
+        <ol>
+          <li>Kocok botol sebelum digunakan</li>
+          <li>Semprotkan dari jarak 10-15 cm pada rambut kering atau setengah lembap</li>
+          <li>Ratakan dengan jari atau sisir</li>
+          <li>Gunakan 2-3 kali semprotan untuk hasil optimal</li>
+          <li>Dapat digunakan kapan saja: setelah keramas, sebelum beraktivitas, atau saat rambut terasa apek</li>
+        </ol>
+        <p><strong>Bonus:</strong> Free 30ml setiap 5 kali pembelian!</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: auto; padding: 60px 20px;">
+    <h2 class="section-title">Berdasarkan Riset Pasar (35 Responden)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>90%</h3>
+        <p>menganggap rambut wangi sangat penting untuk aktivitas sehari-hari</p>
+      </div>
+      <div class="card">
+        <h3>88,6%</h3>
+        <p>lebih menyukai aroma fresh dan segar (seperti Veloura)</p>
+      </div>
+      <div class="card">
+        <h3>87%</h3>
+        <p>tertarik dengan harga Rp20.000 yang kami tawarkan</p>
+      </div>
+      <div class="card">
+        <h3>71,4%</h3>
+        <p>menginginkan hair mist yang menghilangkan bau apek</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>VELOURA</h3>
+        <p>Hair mist alami yang membuatmu wangi dan percaya diri setiap saat. Untuk usia 15-40 tahun yang aktif dan peduli penampilan.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="produk.html">Produk</a></p>
+        <p><a href="tentang_kami.html">Tentang Kami</a></p>
+        <p><a href="kontak.html">Kontak</a></p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>WhatsApp: +62 812-3456-7890</p>
+        <p>Email: info@veloura.com</p>
+        <p>Lokasi: Medan, Indonesia</p>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <a href="https://www.instagram.com/velouraaa.official/"><i class="fab fa-instagram"></i> @velouraaa.official</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 VELOURA | Entrepreneurship 3 - Politeknik Wilmar Bisnis Indonesia</p>
+    </div>
+  </footer>
+
+  <script>
+    const variants = [
+      {
+        name: 'Chamomile Dreams',
+        img: 'img/Produk 3.jpg',
+        desc: 'Hair mist dengan aroma chamomile yang lembut dan menenangkan. Formulasi alami dengan air suling dan aloe vera membantu menjaga kesegaran rambut sekaligus memberikan sensasi relaksasi sepanjang hari. Cocok untuk mahasiswa dan pekerja muda usia 15-40 tahun.',
+        price: 'Rp 20.000'
+      },
+      {
+        name: 'Rosemary Garden',
+        img: 'img/Produk 2.jpg',
+        desc: 'Hair mist dengan aroma rosemary yang segar dan herbal. Membantu menyegarkan kulit kepala serta memberikan kesan bersih dan berenergi sepanjang hari. Formula alami cocok untuk aktivitas luar ruangan dan mobilitas tinggi.',
+        price: 'Rp 20.000'
+      }
+    ];
+
+    let current = 0;
+    let qty = 1;
+
+    function setVariant(index){
+      current = index;
+      updateVariant();
+      document.querySelectorAll('.variant button').forEach((btn,i)=>{
+        btn.classList.toggle('active', i === index);
+      });
+    }
+
+    function updateVariant(){
+      document.getElementById('variantName').innerText = variants[current].name;
+      document.getElementById('variantDesc').innerText = variants[current].desc;
+      document.getElementById('productImg').src = variants[current].img;
+      document.getElementById('price').innerText = variants[current].price;
+    }
+
+    function nextVariant(){ setVariant((current + 1) % variants.length); }
+    function prevVariant(){ setVariant((current - 1 + variants.length) % variants.length); }
+
+    function updateQty(){ 
+      if (qty < 1) qty = 1;
+      document.getElementById('qty').innerText = qty; 
+    }
+
+    function toggleExtra(id){
+      // Tutup semua extra dulu
+      document.querySelectorAll('.extra').forEach(el => {
+        el.style.display = 'none';
+      });
+      // Buka yang dipilih
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+    
+    // Set active nav
+    document.querySelectorAll('.navbar a').forEach(link => {
+      if (link.getAttribute('href') === 'produk.html') {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

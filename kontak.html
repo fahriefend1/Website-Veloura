@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak | VELOURA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar container">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="produk.html">Produk</a>
+      </div>
+      <div class="logo">VELOURA</div>
+      <div class="nav-right">
+        <a href="tentang_kami.html">Tentang Kami</a>
+        <a href="kontak.html" class="active">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <p class="section-subtitle">Untuk pertanyaan, kerja sama, atau informasi lebih lanjut tentang Veloura Hair Mist, silakan hubungi kami melalui kontak di bawah ini.</p>
+        
+        <div class="contact-grid">
+          <!-- Informasi Kontak -->
+          <div>
+            <div class="contact-info">
+              <h3>Informasi Kontak</h3>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>WhatsApp</h3>
+                  <p>+62 882-6309-3318</p>
+                  <a href="https://wa.me/6288263093318" class="btn" style="background: #25D366; color: white; padding: 10px 20px; border-radius: 25px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                    <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+                  </a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <p>info@veloura.com</p>
+                  <a href="mailto:info@veloura.com" class="btn btn-outline btn-sm">
+                    <i class="fas fa-envelope"></i> Kirim Email
+                  </a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Instagram</h3>
+                  <p>@velouraaa.official</p>
+                  <a href="https://www.instagram.com/velouraaa.official/" class="btn btn-outline btn-sm">
+                    <i class="fab fa-instagram"></i> Kunjungi Instagram
+                  </a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Lokasi</h3>
+                  <p>Medan, Indonesia</p>
+                  <p style="font-size: 0.85rem;">Area distribusi: Sampali - Percut Sei Tuan</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-info hours-info mt-30">
+              <h3>Jam Operasional</h3>
+              <div class="hour-row">
+                <span class="hour-day">Senin - Jumat</span>
+                <span class="hour-time">09.00 - 18.00 WIB</span>
+              </div>
+              <div class="hour-row">
+                <span class="hour-day">Sabtu</span>
+                <span class="hour-time">09.00 - 15.00 WIB</span>
+              </div>
+              <div class="hour-row">
+                <span class="hour-day">Minggu</span>
+                <span class="hour-time">Libur</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Form Kontak Standar -->
+          <div>
+            <div class="contact-form-wrapper">
+              <h3>Kirim Pesan kepada Kami</h3>
+              <p>Untuk pertanyaan umum, kerja sama, atau informasi lainnya, silakan isi form di bawah ini.</p>
+              
+              <form class="contact-form" onsubmit="return submitContactForm()">
+                <div class="form-group">
+                  <label>Nama Lengkap *</label>
+                  <input type="text" class="form-control" id="contactNama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+                
+                <div class="form-group">
+                  <label>Email *</label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                  <label>Subjek *</label>
+                  <select class="form-control" id="contactSubject" required>
+                    <option value="">Pilih subjek</option>
+                    <option value="Pertanyaan Produk">Pertanyaan tentang Produk</option>
+                    <option value="Kerja Sama">Penawaran Kerja Sama</option>
+                    <option value="Keluhan">Keluhan atau Masalah</option>
+                    <option value="Lainnya">Lainnya</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label>Pesan *</label>
+                  <textarea class="form-control" id="contactMessage" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                  <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+                
+                <p style="text-align: center; color: var(--gray); margin-top: 20px; font-size: 0.9rem;">
+                  Pesan Anda akan dikirim ke email kami dan akan dibalas dalam 1-2 hari kerja.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content container">
+      <div>
+        <h3>VELOURA</h3>
+        <p>Hair mist alami yang membuatmu wangi dan percaya diri setiap saat. Untuk usia 15-40 tahun yang aktif dan peduli penampilan.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="produk.html">Produk</a></p>
+        <p><a href="tentang_kami.html">Tentang Kami</a></p>
+        <p><a href="kontak.html">Kontak</a></p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>WhatsApp: +62 882-6309-3318</p>
+        <p>Email: info@veloura.com</p>
+        <p>Lokasi: Medan, Indonesia</p>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <a href="https://www.instagram.com/velouraaa.official/"><i class="fab fa-instagram"></i> @velouraaa.official</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 VELOURA | Entrepreneurship 3 - Politeknik Wilmar Bisnis Indonesia</p>
+    </div>
+  </footer>
+  
+  <script>
+    function submitContactForm() {
+      const nama = document.getElementById('contactNama').value;
+      const email = document.getElementById('contactEmail').value;
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value;
+      
+      const emailBody = `Nama: ${nama}
+Email: ${email}
+Subjek: ${subject}
+
+Pesan:
+${message}
+
+---
+Pesan ini dikirim dari form kontak website Veloura.`;
+      
+      const mailtoLink = `mailto:info@veloura.com?subject=${encodeURIComponent(subject)} - Veloura Contact Form&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+      return false;
+    }
+    
+    // Set active nav
+    document.querySelectorAll('.navbar a').forEach(link => {
+      if (link.getAttribute('href') === 'kontak.html') {
+        link.classList.add('active');
+      }
+    });
+    // Mobile menu toggle
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    menuToggle.setAttribute('aria-label', 'Toggle menu');
+    
+    // Tambahkan menu toggle ke navbar
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      navbar.appendChild(menuToggle);
+      
+      // Toggle menu mobile
+      menuToggle.addEventListener('click', function() {
+        const navLeft = document.querySelector('.nav-left');
+        const navRight = document.querySelector('.nav-right');
+        
+        navLeft.classList.toggle('active');
+        navRight.classList.toggle('active');
+        
+        // Ganti icon
+        const icon = this.querySelector('i');
+        if (navLeft.classList.contains('active')) {
+          icon.className = 'fas fa-times';
+          this.setAttribute('aria-expanded', 'true');
+        } else {
+          icon.className = 'fas fa-bars';
+          this.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Tutup menu saat klik di luar
+      document.addEventListener('click', function(event) {
+        const navLeft = document.querySelector('.nav-left');
+        const navRight = document.querySelector('.nav-right');
+        const menuToggle = document.querySelector('.menu-toggle');
+        
+        if (!navbar.contains(event.target) && navLeft && navLeft.classList.contains('active')) {
+          navLeft.classList.remove('active');
+          navRight.classList.remove('active');
+          menuToggle.querySelector('i').className = 'fas fa-bars';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Tutup menu saat klik link
+      document.querySelectorAll('.nav-left a, .nav-right a').forEach(link => {
+        link.addEventListener('click', function() {
+          const navLeft = document.querySelector('.nav-left');
+          const navRight = document.querySelector('.nav-right');
+          const menuToggle = document.querySelector('.menu-toggle');
+          
+          if (window.innerWidth <= 768) {
+            navLeft.classList.remove('active');
+            navRight.classList.remove('active');
+            menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
